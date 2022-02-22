@@ -190,7 +190,7 @@ async function insertJournalBlocks(data, preferredDateFormat:string, calendarNam
     let endTime = formatTime(data[dataKey]["end"], settings)
     let location = data[dataKey]["location"]
     let summary
-    if (data[dataKey]["summary"]["val"]){
+    if (typeof data[dataKey]["summary"]["val"] != "undefined"){
       summary = data[dataKey]["summary"]["val"]
     }
     else{
